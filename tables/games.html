@@ -57,7 +57,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
 
 <a href="../index.html" class="brand-link">
 
-<span class="brand-text">AdminLTE</span>
+<span class="brand-text">AdminLTE | Tablas</span>
 
 </a>
 
@@ -74,7 +74,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
 <a href="games.html" class="nav-link active">
 
 <i class="nav-icon bi bi-controller"></i>
-<p>Games</p>
+<p>Tabla de Videojuegos</p>
 
 </a>
 
@@ -85,7 +85,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
 <a href="genres.html" class="nav-link">
 
 <i class="nav-icon bi bi-tags"></i>
-<p>Genres</p>
+<p>Tabla de géneros de juegos</p>
 
 </a>
 
@@ -150,14 +150,14 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
     <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title">Game</h5>
+            <h5 class="modal-title">Información del Juego</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
     <div class="modal-body">
         <form id="gameForm">
             <input type="hidden" id="game_id">
             <div class="mb-3">
-                <label class="form-label">Name</label>
+                <label class="form-label">Nombre</label>
                 <input
                 type="text"
                 class="form-control"
@@ -166,7 +166,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
                 >
             </div>
             <div class="mb-3">
-                <label class="form-label">Developer</label>
+                <label class="form-label">Desarrollador</label>
                 <input
                 type="text"
                 class="form-control"
@@ -175,7 +175,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
                 >
             </div>
             <div class="mb-3">
-                <label class="form-label">Genre</label>
+                <label class="form-label">Género</label>
                 <select
                 id="genre"
                 class="form-control"
@@ -189,13 +189,13 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
     class="btn btn-secondary"
     data-bs-dismiss="modal"
     >
-    Cancel
+    Cancelar
     </button>
     <button
     class="btn btn-primary"
     onclick="saveGame()"
     >
-    Save
+    Guardar
     </button>
     </div>
     </div>
@@ -211,7 +211,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
     
     <div class="modal-header bg-danger text-white">
     
-    <h5 class="modal-title">Confirm Delete</h5>
+    <h5 class="modal-title">CONFIRMACIÓN</h5>
     
     <button class="btn-close" data-bs-dismiss="modal"></button>
     
@@ -222,10 +222,10 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
     </div>
     <div class="modal-footer">
     <button class="btn btn-secondary" data-bs-dismiss="modal">
-    Cancel
+    CANCELAR
     </button>
     <button class="btn btn-danger" id="confirmDeleteBtn">
-    Delete
+    ELIMINAR
     </button>
     </div>
     </div>
@@ -240,7 +240,7 @@ href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
     
     <div class="modal-header bg-success text-white">
     
-    <h5 class="modal-title">Success</h5>
+    <h5 class="modal-title">REALIZADO CON ÉXITO</h5>
     
     <button class="btn-close" data-bs-dismiss="modal"></button>
     
