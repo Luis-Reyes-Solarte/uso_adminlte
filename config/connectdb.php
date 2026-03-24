@@ -1,5 +1,5 @@
 <?php
-$hostDB = 'localhost';
+$hostDB = 'db';
 $nameDB = 'games_db';
 $userDB = 'rpg_user';
 $pwDB = 'hola123..';

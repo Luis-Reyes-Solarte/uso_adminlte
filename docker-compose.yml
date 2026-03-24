@@ -1,0 +1,40 @@
+services:
+  # Servicio de Servidor Web (PHP + Apache)
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+
+  # Servicio de Base de Datos
+  db:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password # Es mejor poner una clave aunque sea sencilla
+      MYSQL_DATABASE: games_db
+      MYSQL_USER: rpg_user
+      MYSQL_PASSWORD: hola123..
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  # INTERFAZ PARA TUS BASES DE DATOS (phpMyAdmin)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+    depends_on:
+      - db
+
+# ESTA ES LA PARTE QUE CORREGIMOS:
+volumes:
+  db_data:
