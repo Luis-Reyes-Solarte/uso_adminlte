@@ -2,6 +2,7 @@ services:
   # Servicio de Servidor Web (PHP + Apache)
   web:
     build: .
+    restart: always
     ports:
       - "8080:80"
     volumes:
@@ -14,12 +15,13 @@ services:
     image: mariadb:10.6
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password # Es mejor poner una clave aunque sea sencilla
+      MYSQL_ROOT_PASSWORD: root_pwd # Es mejor poner una clave aunque sea sencilla
       MYSQL_DATABASE: games_db
       MYSQL_USER: rpg_user
       MYSQL_PASSWORD: hola123..
     volumes:
       - db_data:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d
 
   # INTERFAZ PARA TUS BASES DE DATOS (phpMyAdmin)
   phpmyadmin:
